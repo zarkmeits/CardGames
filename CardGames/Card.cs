@@ -19,14 +19,33 @@ namespace CardGames
 
         public int CompareTo(Card OtherCardObject)
         {
-            if (this.rank == OtherCardObject.rank)
+            if (this.rank.CompareTo(OtherCardObject.rank) == 0)
             {
                 return 0;
             }
-            else if ((this.rank) < OtherCardObject.rank)
+            else if (this.rank.CompareTo(OtherCardObject.rank) == -1)
             {
                 return -1;   
             }
+            else
+            {
+                return 1;
+            }
+        }
+
+        public Rank GetRank()
+        {
+            return this.rank;
+        }
+
+        public Suit GetSuit()
+        {
+            return this.suit;
+        }
+
+        public override string ToString()
+        {
+            return (this.rank + " of " + this.suit);
         }
     }
 }
