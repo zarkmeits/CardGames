@@ -7,23 +7,41 @@ namespace CardGames
     {
         int rank;
 
-        static int TWO = 2;
-        static int THREE = 3;
-        static int FOUR = 4;
-        static int FIVE = 5;
-        static int SIX = 6;
-        static int SEVEN = 7;
-        static int EIGHT = 8;
-        static int NINE = 9;
-        static int TEN = 10;
-        static int JACK = 11;
-        static int QUEEN = 12;
-        static int KING = 13;
-        static int ACE = 14;
+        static readonly Rank TWO;
+        static readonly Rank THREE;
+        static readonly Rank FOUR;
+        static readonly Rank FIVE;
+        static readonly Rank SIX;
+        static readonly Rank SEVEN;
+        static readonly Rank EIGHT;
+        static readonly Rank NINE;
+        static readonly Rank TEN;
+        static readonly Rank JACK;
+        static readonly Rank QUEEN;
+        static readonly Rank KING;
+        static readonly Rank ACE;
 
-        public Rank(int card)
+        static Rank()
         {
-            rank = card;
+            TWO = new Rank(2);
+            THREE = new Rank(3);
+            FOUR = new Rank(4);
+            FIVE = new Rank(5);
+            SIX = new Rank(6);
+            SEVEN = new Rank(7);
+            EIGHT = new Rank(8);
+            NINE = new Rank(9);
+            TEN = new Rank(10);
+            JACK = new Rank(11);
+            QUEEN = new Rank(12);
+            KING = new Rank(13);
+            ACE = new Rank(14);
+        }
+
+        public Rank(int val)
+        {
+            //ASK MATT ABOUT THE LIST
+            rank = val;
         }
 
         public int CompareTo(Rank OtherRankObject)
@@ -121,20 +139,6 @@ namespace CardGames
         static void Main()
         {
             List<Rank> ranks = new List<Rank>();
-
-            ranks.Add(new Rank(TWO));
-            ranks.Add(new Rank(THREE));
-            ranks.Add(new Rank(FOUR));
-            ranks.Add(new Rank(FIVE));
-            ranks.Add(new Rank(SIX));
-            ranks.Add(new Rank(SEVEN));
-            ranks.Add(new Rank(EIGHT));
-            ranks.Add(new Rank(NINE));
-            ranks.Add(new Rank(TEN));
-            ranks.Add(new Rank(JACK));
-            ranks.Add(new Rank(QUEEN));
-            ranks.Add(new Rank(KING));
-            ranks.Add(new Rank(ACE));
 
             foreach (Rank card in ranks)
             {

@@ -17,6 +17,7 @@ namespace CardGames
             this.rank = r;
         }
 
+        //Do we need to check for suit as well??
         public int CompareTo(Card OtherCardObject)
         {
             if (this.rank.CompareTo(OtherCardObject.rank) == 0)

@@ -13,10 +13,18 @@ namespace CardGames
 
         // static int Values = 1; WHAT IS THIS SUPPOSED TO BE
 
-        static int CLUBS = 1;
-        static int DIAMONDS = 2;
-        static int HEARTS = 3;
-        static int SPADES = 4;
+        static readonly Suit CLUBS;
+        static readonly Suit DIAMONDS;
+        static readonly Suit HEARTS;
+        static readonly Suit SPADES;
+
+        static Suit()
+        {
+            CLUBS = new Suit(1);
+            DIAMONDS = new Suit(2);
+            HEARTS = new Suit(3);
+            SPADES = new Suit(4);
+        }
 
         public Suit(int suitValue)
         {
@@ -39,9 +47,6 @@ namespace CardGames
             }
         }
 
-        //Are GetSymbal and GetName and ToString the same thing? 
-        //
-        //Or should we do this?
         public char GetSymbol()
         {
             switch (this.suit)
