@@ -112,10 +112,10 @@ namespace CardGames
             }    
         }
 
-        public string ToString()
+        public override string ToString()
         {
             // WHAT ARE WE DOING!
-            return null;
+            return this.GetName();
         }
 
         static void Main()

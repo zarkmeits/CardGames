@@ -75,5 +75,11 @@ namespace CardGames
                     return "Invalid.";
             }
         }
+
+        public override string ToString()
+        {
+            // WHAT ARE WE DOING!
+            return this.GetName();
+        }
     }
 }
