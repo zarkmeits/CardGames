@@ -7,6 +7,8 @@ namespace CardGames
     {
         int rank;
 
+        public static List<Rank> VALUES = new List<Rank>();
+
         static readonly Rank TWO;
         static readonly Rank THREE;
         static readonly Rank FOUR;
@@ -36,11 +38,24 @@ namespace CardGames
             QUEEN = new Rank(12);
             KING = new Rank(13);
             ACE = new Rank(14);
+
+            VALUES.Add(TWO);
+            VALUES.Add(THREE);
+            VALUES.Add(FOUR);
+            VALUES.Add(FIVE);
+            VALUES.Add(SIX);
+            VALUES.Add(SEVEN);
+            VALUES.Add(EIGHT);
+            VALUES.Add(NINE);
+            VALUES.Add(TEN);
+            VALUES.Add(JACK);
+            VALUES.Add(QUEEN);
+            VALUES.Add(KING);
+            VALUES.Add(ACE);
         }
 
         public Rank(int val)
         {
-            //ASK MATT ABOUT THE LIST
             rank = val;
         }
 
@@ -60,7 +75,7 @@ namespace CardGames
             }
         }
 
-        public string GetSymbol(Rank rank)
+        public string GetSymbol()
         {
             switch (this.rank)
             {
