@@ -7,21 +7,21 @@ namespace CardGames
     {
         int rank;
 
-        public static List<Rank> VALUES = new List<Rank>();
+        public static readonly Rank TWO;
+        public static readonly Rank THREE;
+        public static readonly Rank FOUR;
+        public static readonly Rank FIVE;
+        public static readonly Rank SIX;
+        public static readonly Rank SEVEN;
+        public static readonly Rank EIGHT;
+        public static readonly Rank NINE;
+        public static readonly Rank TEN;
+        public static readonly Rank JACK;
+        public static readonly Rank QUEEN;
+        public static readonly Rank KING;
+        public static readonly Rank ACE;
 
-        static readonly Rank TWO;
-        static readonly Rank THREE;
-        static readonly Rank FOUR;
-        static readonly Rank FIVE;
-        static readonly Rank SIX;
-        static readonly Rank SEVEN;
-        static readonly Rank EIGHT;
-        static readonly Rank NINE;
-        static readonly Rank TEN;
-        static readonly Rank JACK;
-        static readonly Rank QUEEN;
-        static readonly Rank KING;
-        static readonly Rank ACE;
+        public static List<Rank> VALUES;
 
         static Rank()
         {
@@ -39,19 +39,22 @@ namespace CardGames
             KING = new Rank(13);
             ACE = new Rank(14);
 
-            VALUES.Add(TWO);
-            VALUES.Add(THREE);
-            VALUES.Add(FOUR);
-            VALUES.Add(FIVE);
-            VALUES.Add(SIX);
-            VALUES.Add(SEVEN);
-            VALUES.Add(EIGHT);
-            VALUES.Add(NINE);
-            VALUES.Add(TEN);
-            VALUES.Add(JACK);
-            VALUES.Add(QUEEN);
-            VALUES.Add(KING);
-            VALUES.Add(ACE);
+            VALUES = new List<Rank>()
+            {
+                TWO,
+                THREE,
+                FOUR,
+                FIVE,
+                SIX,
+                SEVEN,
+                EIGHT,
+                NINE,
+                TEN,
+                JACK,
+                QUEEN,
+                KING,
+                ACE,
+            };
         }
 
         public Rank(int val)
@@ -148,17 +151,7 @@ namespace CardGames
         public override string ToString()
         {
             // WHAT ARE WE DOING!
-            return this.GetName();
-        }
-
-        static void Main()
-        {
-            List<Rank> ranks = new List<Rank>();
-
-            foreach (Rank card in ranks)
-            {
-                Console.WriteLine(card.rank);
-            }
+            return this.GetSymbol();
         }
     }
 }

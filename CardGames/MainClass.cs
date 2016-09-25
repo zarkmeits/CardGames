@@ -44,7 +44,7 @@ namespace CardGames
             Console.WriteLine("Comparing {0} and {1}: ---> {2}", c4, c5, c4.CompareTo(c5));
 
             // play a CardCountGame
-            CardCountGame.PlayGame();
+            // CardCountGame.PlayGame();
 
         }
     }

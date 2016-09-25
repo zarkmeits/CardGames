@@ -46,7 +46,7 @@ namespace CardGames
 
         public override string ToString()
         {
-            return (this.rank + " of " + this.suit);
+            return (this.rank + "" + this.suit);
         }
     }
 }

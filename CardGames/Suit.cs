@@ -13,10 +13,12 @@ namespace CardGames
 
         // static int Values = 1; WHAT IS THIS SUPPOSED TO BE
 
-        static readonly Suit CLUBS;
-        static readonly Suit DIAMONDS;
-        static readonly Suit HEARTS;
-        static readonly Suit SPADES;
+        public static readonly Suit CLUBS;
+        public static readonly Suit DIAMONDS;
+        public static readonly Suit HEARTS;
+        public static readonly Suit SPADES;
+
+        public static List<Suit> VALUES;
 
         static Suit()
         {
@@ -24,6 +26,14 @@ namespace CardGames
             DIAMONDS = new Suit(2);
             HEARTS = new Suit(3);
             SPADES = new Suit(4);
+
+            VALUES = new List<Suit>()
+            {
+                CLUBS,
+                DIAMONDS,
+                HEARTS,
+                SPADES,
+            };
         }
 
         public Suit(int suitValue)
@@ -47,20 +57,20 @@ namespace CardGames
             }
         }
 
-        public char GetSymbol()
+        public string GetSymbol()
         {
             switch (this.suit)
             {
                 case 1:
-                    return '♣';
+                    return "♣";
                 case 2:
-                    return '♦';
+                    return "♦";
                 case 3:
-                    return '♥';
+                    return "♥";
                 case 4:
-                    return '♠';
+                    return "♠";
                 default:
-                    return 'x';
+                    return "x";
             }
         }
 
@@ -84,7 +94,7 @@ namespace CardGames
         public override string ToString()
         {
             // WHAT ARE WE DOING!
-            return this.GetName();
+            return this.GetSymbol();
         }
     }
 }
