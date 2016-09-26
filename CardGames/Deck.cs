@@ -9,8 +9,6 @@ namespace CardGames
     class Deck
     {
 
-        int cardTotal;
-
         public static List<Card> DECK;
         public static List<Card> dealt;
 
