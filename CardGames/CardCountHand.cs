@@ -8,8 +8,6 @@ namespace CardGames
 {
     class CardCountHand : Hand
     {
-        CardCountHand hand = new CardCountHand();
-
         public override int CompareTo(Hand OtherHandObject)
         {
             int handOneVal = this.EvaluateHand();
@@ -33,9 +31,9 @@ namespace CardGames
         {
             int totalValue = 0;
             
-            for (var i = 0; i < hand.GetNumberOfCards(); i++)
+            for (var i = 0; i < this.GetNumberOfCards(); i++)
             {
-                Card temp = hand.GetCardAtIndex(i);
+                Card temp = this.GetCardAtIndex(i);
                 int value = GetCardValue(temp);
                 totalValue += value;
             }

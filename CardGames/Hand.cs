@@ -89,7 +89,7 @@ namespace CardGames
 
             foreach(Card c in handOfCards)
             {
-                message += c + "\n";
+                message += c + " ";
             }
 
             return message;
