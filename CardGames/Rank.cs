@@ -5,7 +5,7 @@ namespace CardGames
 {
     public class Rank
     {
-        int rank;
+        public int rank;
 
         public static readonly Rank TWO;
         public static readonly Rank THREE;

@@ -15,7 +15,7 @@ namespace CardGames
             handOfCards.Add(c);
         }
 
-        public abstract int CompareTo(Hand OtherHandObject);
+        abstract public int CompareTo(Hand OtherHandObject);
 
         public bool ContainsCard(Card c)
         {
@@ -81,7 +81,7 @@ namespace CardGames
             return removedCard;
         }
 
-        public abstract int EvaluateHand();
+        abstract public int EvaluateHand();
 
         public override string ToString()
         {

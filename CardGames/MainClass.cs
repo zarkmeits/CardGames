@@ -34,8 +34,6 @@ namespace CardGames
                 Console.WriteLine(s);
             Console.WriteLine("Number of suits: " + Suit.VALUES.Count);
 
-
-
             // testing CompareTo functionality
             Console.WriteLine("Comparing {0} and {1}: ---> {2}", c1, c2, c1.CompareTo(c2));
             Console.WriteLine("Comparing {0} and {1}: ---> {2}", c1, c3, c1.CompareTo(c3));
