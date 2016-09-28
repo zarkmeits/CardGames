@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace CardGames 
 {
-    class CardCountHand : Hand
+    class BlackJackHand : Hand
     {
-        override public int CompareTo(Hand OtherHandObject)
+
+        public override int CompareTo(Hand OtherHandObject)
         {
             int handOneVal = this.EvaluateHand();
-            int handTwoVal = OtherHandObject.EvaluateHand();    
-                    
-            if(handOneVal > handTwoVal)
+            int handTwoVal = OtherHandObject.EvaluateHand();
+
+            if (handOneVal > handTwoVal)
             {
                 return 1;
-            } 
+            }
             else if (handOneVal < handTwoVal)
             {
                 return -1;
@@ -27,10 +28,10 @@ namespace CardGames
             }
         }
 
-        override public int EvaluateHand()
+        public override int EvaluateHand()
         {
             int totalValue = 0;
-            
+
             for (var i = 0; i < this.GetNumberOfCards(); i++)
             {
                 Card temp = this.GetCardAtIndex(i);
@@ -46,20 +47,21 @@ namespace CardGames
             int pts = 0;
             Rank r = c.GetRank();
 
-            if(r.rank <= 10)
+            if (r.rank <= 10)
             {
                 pts = r.rank;
             }
-            else if(r.rank < 14)
+            else if (r.rank < 14)
             {
                 pts = 10;
             }
             else
             {
-                pts = 1;
+                pts = 11;
             }
 
             return pts;
-       }
+        }
+
     }
 }
