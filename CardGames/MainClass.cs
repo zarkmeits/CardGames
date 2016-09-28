@@ -44,6 +44,9 @@ namespace CardGames
             // play a CardCountGame
             CardCountGame.PlayGame();
 
+            // play a game of Blackjack
+            BlackJackGame.PlayGame();
+
         }
     }
 

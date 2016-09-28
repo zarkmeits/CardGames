@@ -8,7 +8,7 @@ namespace CardGames
 {
     abstract class Hand
     {
-        List<Card> handOfCards = new List<Card>();
+        public List<Card> handOfCards = new List<Card>();
 
         public void AddCard(Card c)
         {
